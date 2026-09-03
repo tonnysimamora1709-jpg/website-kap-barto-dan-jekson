@@ -1,0 +1,824 @@
+/* ================================
+   DASAR
+   ================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #222;
+    background: #ffffff;
+    line-height: 1.6;
+}
+
+
+/* ================================
+   HEADER
+   ================================ */
+
+header {
+    width: 100%;
+    padding: 18px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #ffffff;
+    border-bottom: 1px solid #eeeeee;
+}
+
+.logo img {
+    width: 90px;
+    height: auto;
+}
+
+/* ================================
+   BRAND
+   ================================ */
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.brand-name {
+    display: flex;
+    flex-direction: column;
+}
+
+.brand-name strong {
+    font-size: 20px;
+    color: #16324f;
+    letter-spacing: 0.5px;
+}
+
+.brand-name span {
+    font-size: 13px;
+    color: #777;
+    margin-top: 2px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #1d3557;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 10px 14px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #ffffff;
+    background: #1d5d8f;
+}
+
+
+/* ================================
+   HERO
+   ================================ */
+
+.hero {
+    min-height: 520px;
+    display: flex;
+    align-items: center;
+    padding: 80px 8%;
+    background: #f3f7fb;
+}
+
+.hero-text {
+    max-width: 700px;
+}
+
+.hero h1 {
+    font-size: 52px;
+    line-height: 1.15;
+    color: #16324f;
+    margin-bottom: 25px;
+}
+
+.hero p {
+    font-size: 19px;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 13px 28px;
+    background: #1d5d8f;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background: #143f61;
+}
+
+
+/* ================================
+   SECTION UMUM
+   ================================ */
+
+section {
+    padding: 80px 8%;
+}
+
+section h2 {
+    text-align: center;
+    font-size: 34px;
+    color: #16324f;
+    margin-bottom: 25px;
+}
+
+section > p {
+    max-width: 800px;
+    margin: auto;
+    text-align: center;
+    color: #555;
+}
+
+
+/* ================================
+   LAYANAN
+   ================================ */
+
+#layanan {
+    background: #f7f9fc;
+}
+
+.layanan-container {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+.layanan-box {
+    background: white;
+    padding: 30px;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
+}
+
+.layanan-box h3 {
+    color: #1d5d8f;
+    margin-bottom: 15px;
+}
+
+.layanan-box p {
+    color: #666;
+}
+
+
+/* ================================
+   KONTAK
+   ================================ */
+
+#kontak {
+    background: #f3f7fb;
+}
+
+#kontak p {
+    margin: 8px auto;
+}
+
+
+/* ================================
+   FOOTER
+   ================================ */
+
+footer {
+    padding: 25px;
+    text-align: center;
+    background: #16324f;
+    color: white;
+}
+
+
+/* ================================
+   RESPONSIVE
+   ================================ */
+
+@media (max-width: 900px) {
+
+    .layanan-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .hero h1 {
+        font-size: 42px;
+    }
+
+}
+
+@media (max-width: 800px) {
+
+    header {
+        flex-direction: column;
+        gap: 20px;
+        padding: 18px 5%;
+    }
+
+    nav {
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 5px;
+    }
+
+    nav a {
+        font-size: 13px;
+        padding: 8px 10px;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+   .layanan-container {
+    grid-template-columns: 1fr;
+    gap: 20px;
+   }
+
+   .layanan-box {
+    padding: 25px 20px;
+   }
+
+   .tentang-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+   }
+
+   .tentang-text h2 {
+    font-size: 30px;
+    text-align: center;
+    }
+
+   .tentang-text {
+    text-align: center;
+    }
+
+   .tentang-text p {
+    text-align: center;
+   }
+
+   .hero {
+    text-align: center;
+    padding: 70px 5%;
+   }
+
+   .hero h1 {
+    font-size: 34px;
+   }
+
+   .hero p {
+    font-size: 16px;
+   }
+
+}
+
+/* ================================ 
+   HERO ELEGAN 
+  ================================ */ 
+
+.hero { 
+   min-height: 560px; 
+   display: flex; 
+   align-items: center; 
+   padding: 90px 8%; 
+   background: linear-gradient(135deg, #f3f7fb, #ffffff); 
+} 
+
+.hero-text { 
+   max-width: 750px; 
+} 
+
+.hero-subtitle { 
+   font-size: 14px; 
+   font-weight: bold; 
+   letter-spacing: 3px; 
+   color: #2a6f97; 
+   margin-bottom: 15px; 
+} 
+
+.hero h1 { 
+   font-size: 56px; 
+   line-height: 1.1; 
+   color: #16324f; 
+   margin-bottom: 12px; 
+   letter-spacing: 1px; 
+} 
+
+.hero h2 { 
+   font-size: 25px; 
+   font-weight: normal; 
+   color: #2a6f97; 
+   margin-bottom: 22px; 
+} 
+
+.hero p { 
+   font-size: 18px; 
+   color: #555; 
+   margin-bottom: 30px; 
+   max-width: 650px; 
+} 
+
+.hero .btn { 
+   padding: 14px 32px; 
+   background: #1d5d8f; 
+   color: white; 
+   border-radius: 6px; 
+   transition: 0.3s; 
+} 
+
+.hero .btn:hover { 
+   background: #16324f; 
+  transform: translateY(-2px); 
+}
+
+/* ================================ 
+   TENTANG KAMI ================================ */ 
+
+#tentang { 
+    background: #ffffff; 
+} 
+
+.tentang-container { 
+   display: grid; 
+   grid-template-columns: 1fr 1fr; 
+   gap: 70px; 
+   align-items: center; 
+   max-width: 1200px; 
+   margin: auto; 
+} 
+
+.tentang-text { 
+   text-align: left; 
+} 
+
+.section-label { 
+   font-size: 13px; 
+   font-weight: bold; 
+   letter-spacing: 3px; 
+   color: #2a6f97; 
+   margin-bottom: 12px; 
+} 
+
+.tentang-text h2 { 
+   text-align: left; 
+   font-size: 38px; 
+   line-height: 1.2; 
+   margin-bottom: 25px; 
+} 
+
+.tentang-text p:not(.section-label) { 
+   text-align: left; 
+   margin: 0 0 18px; 
+   color: #555; 
+} 
+
+.nilai-container { 
+   display: grid; 
+   grid-template-columns: 1fr 1fr; 
+   gap: 20px; 
+} 
+
+.nilai-box { 
+   padding: 28px; 
+   background: #f5f8fb; 
+   border-left: 4px solid #1d5d8f; 
+   transition: 0.3s; 
+} 
+
+.nilai-box:hover { 
+   transform: translateY(-5px); 
+   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08); 
+} 
+
+.nilai-box h3 { 
+   color: #16324f; 
+   margin-bottom: 10px; 
+} 
+
+.nilai-box p { 
+   color: #666; 
+   font-size: 14px; 
+} 
+
+
+/* RESPONSIVE TENTANG */ 
+
+@media (max-width: 800px) { 
+
+   .tentang-container { 
+     grid-template-columns: 1fr; 
+     gap: 40px; 
+} 
+
+.tentang-text h2 { 
+   font-size: 32px; 
+   }
+ 
+}
+
+/* ================================ 
+   LAYANAN PROFESIONAL ================================ */ 
+
+#layanan { 
+   background: #f5f8fb; 
+} 
+
+.layanan-label { 
+   text-align: center; 
+   margin-bottom: 8px; 
+} 
+
+.layanan-intro { 
+   margin-bottom: 45px !important; 
+} 
+
+.layanan-container { 
+   margin-top: 35px; 
+   display: grid; 
+   grid-template-columns: repeat(4, 1fr); 
+   gap: 25px; 
+   max-width: 1200px; 
+   margin-left: auto; 
+   margin-right: auto; 
+} 
+
+.layanan-box { 
+   background: #ffffff; 
+   padding: 35px 25px; 
+   text-align: center; 
+   border-radius: 10px; 
+   border: 1px solid #e5ebf0; 
+   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
+   transition: 0.3s; 
+} 
+
+.layanan-box:hover { 
+   transform: translateY(-8px); 
+   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.10); 
+} 
+
+.layanan-icon { 
+   width: 55px; height: 55px; 
+   margin: 0 auto 20px; 
+   display: flex; 
+   align-items: center; 
+   justify-content: center; 
+   background: #eaf2f8; 
+   color: #1d5d8f; 
+   border-radius: 50%; 
+   font-size: 24px; 
+   font-weight: bold; 
+} 
+
+.layanan-box h3 { 
+   color: #16324f; 
+   font-size: 21px; 
+   margin-bottom: 15px; 
+} 
+
+.layanan-box p { 
+   color: #666; 
+   font-size: 14px; 
+   margin-bottom: 20px; 
+} 
+
+.layanan-box a { 
+   color: #1d5d8f; 
+   text-decoration: none; 
+   font-size: 14px; 
+   font-weight: bold; 
+} 
+
+.layanan-box a:hover { 
+   color: #16324f; 
+} 
+
+/* RESPONSIVE LAYANAN */ 
+
+@media (max-width: 900px) { 
+
+   .layanan-container { 
+     grid-template-columns: repeat(2, 1fr); 
+   } 
+} 
+
+@media (max-width: 600px) { 
+
+   .layanan-container { 
+     grid-template-columns: 1fr; 
+   } 
+}
+
+/* ================================
+   TIM PROFESIONAL
+   ================================ */
+
+#tim {
+    background: #ffffff;
+}
+
+.tim-label {
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+.tim-intro {
+    margin-bottom: 45px !important;
+}
+
+.tim-container {
+    max-width: 850px;
+    margin: 40px auto 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.tim-card {
+    background: #f5f8fb;
+    padding: 40px 30px;
+    text-align: center;
+    border: 1px solid #e5ebf0;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.tim-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.09);
+}
+
+.tim-photo {
+    width: 90px;
+    height: 90px;
+    margin: 0 auto 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #16324f;
+    color: #ffffff;
+    font-size: 34px;
+    font-weight: bold;
+}
+
+.tim-card h3 {
+    color: #16324f;
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+
+.tim-card span {
+    color: #2a6f97;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.tim-card p {
+    color: #666;
+    font-size: 14px;
+    margin-top: 18px;
+}
+
+
+/* RESPONSIVE TIM */
+
+@media (max-width: 600px) {
+
+    .kontak-container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .kontak-text {
+        text-align: center;
+    }
+
+    .kontak-text h2 {
+        text-align: center;
+        font-size: 30px;
+    }
+
+    .kontak-text > p:last-child {
+        text-align: center;
+    }
+
+}
+
+/* ================================
+   KONTAK
+   ================================ */
+
+#kontak {
+    background: #f5f8fb;
+}
+
+.kontak-container {
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 70px;
+    align-items: center;
+}
+
+.kontak-text {
+    text-align: left;
+}
+
+.kontak-text h2 {
+    text-align: left;
+    font-size: 40px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.kontak-text > p:last-child {
+    text-align: left;
+    color: #666;
+    font-size: 16px;
+    max-width: 500px;
+}
+
+
+.kontak-info {
+    background: #ffffff;
+    padding: 35px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+}
+
+.kontak-box {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    padding: 18px 0;
+    border-bottom: 1px solid #e5ebf0;
+}
+
+.kontak-icon {
+    width: 50px;
+    height: 50px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #eaf2f8;
+    color: #1d5d8f;
+    border-radius: 50%;
+    font-size: 22px;
+}
+
+.kontak-box h3 {
+    color: #16324f;
+    font-size: 16px;
+    margin-bottom: 3px;
+}
+
+.kontak-box p {
+    color: #666;
+    font-size: 14px;
+}
+
+
+/* TOMBOL WHATSAPP */
+
+.whatsapp-btn {
+    display: block;
+    margin-top: 25px;
+    padding: 14px 20px;
+    background: #1d5d8f;
+    color: #ffffff;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.whatsapp-btn:hover {
+    background: #16324f;
+    transform: translateY(-2px);
+}
+
+
+/* RESPONSIVE KONTAK */
+
+@media (max-width: 800px) {
+
+    .kontak-container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .kontak-text h2 {
+        font-size: 32px;
+    }
+
+}
+
+/* ================================
+   FOOTER
+   ================================ */
+
+footer {
+    background: #16324f;
+    color: #ffffff;
+    padding: 45px 8% 20px;
+}
+
+.footer-container {
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+}
+
+.footer-brand {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-brand strong {
+    font-size: 20px;
+    letter-spacing: 1px;
+}
+
+.footer-brand span {
+    font-size: 13px;
+    color: #c9d6e2;
+    margin-top: 3px;
+}
+
+.footer-menu {
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.footer-menu a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.footer-menu a:hover {
+    color: #8fc4e8;
+}
+
+.footer-bottom {
+    max-width: 1100px;
+    margin: 35px auto 0;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    text-align: center;
+}
+
+.footer-bottom p {
+    color: #c9d6e2;
+    font-size: 13px;
+}
+
+
+/* RESPONSIVE FOOTER */
+
+@media (max-width: 600px) {
+
+    .footer-container {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+
+    .footer-menu {
+        justify-content: center;
+        gap: 15px;
+    }
+
+}
