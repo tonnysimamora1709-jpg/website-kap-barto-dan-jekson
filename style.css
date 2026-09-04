@@ -1501,3 +1501,23 @@ footer {
 .team-card:hover .team-avatar {
     transform: scale(1.08);
 }
+
+/* =========================================================
+   POLISH KONTAK
+========================================================= */
+
+.contact-text h2 {
+    color: #123b5d;
+}
+
+.contact-text p {
+    line-height: 1.8;
+}
+
+.contact-item {
+    transition: 0.3s ease;
+}
+
+.contact-item:hover {
+    transform: translateX(5px);
+}
