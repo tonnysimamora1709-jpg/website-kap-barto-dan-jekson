@@ -78,47 +78,105 @@ nav a:hover {
     background: #1d5d8f;
 }
 
-/* HERO */
+/* =========================================
+   HERO / BERANDA
+   ========================================= */
+
 .hero {
     min-height: 560px;
     display: flex;
     align-items: center;
-    padding: 90px 8%;
-    background: linear-gradient(135deg, #f3f7fb, #ffffff);
+    padding: 80px 8%;
+    background:
+        linear-gradient(135deg, #0f3557 0%, #1d5d8f 55%, #2a6f97 100%);
+    position: relative;
+    overflow: hidden;
 }
 
+/* Elemen dekorasi */
+
+.hero::before {
+    content: "";
+    position: absolute;
+    width: 420px;
+    height: 420px;
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 50%;
+    right: -120px;
+    top: -100px;
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    width: 280px;
+    height: 280px;
+    border: 1px solid rgba(255,255,255,0.10);
+    border-radius: 50%;
+    right: 80px;
+    bottom: -170px;
+}
+
+/* Isi Hero */
+
 .hero-text {
-    max-width: 750px;
+    position: relative;
+    z-index: 2;
+    max-width: 780px;
 }
 
 .hero-subtitle {
+    display: inline-block;
     font-size: 14px;
     font-weight: bold;
     letter-spacing: 3px;
-    color: #2a6f97;
-    margin-bottom: 15px;
+    color: #dcecf8;
+    margin-bottom: 18px;
+    padding: 8px 16px;
+    border-left: 4px solid #ffffff;
+    background: rgba(255,255,255,0.08);
 }
 
 .hero h1 {
-    font-size: 56px;
-    line-height: 1.1;
-    color: #16324f;
-    margin-bottom: 12px;
-    letter-spacing: 1px;
+    font-size: 58px;
+    line-height: 1.05;
+    color: #ffffff;
+    margin-bottom: 15px;
+    letter-spacing: 2px;
 }
 
 .hero h2 {
-    font-size: 25px;
+    font-size: 26px;
     font-weight: normal;
-    color: #2a6f97;
-    margin-bottom: 22px;
+    color: #dcecf8;
+    margin-bottom: 24px;
 }
 
 .hero p {
-    max-width: 650px;
-    font-size: 18px;
-    color: #555;
-    margin-bottom: 30px;
+    max-width: 680px;
+    font-size: 17px;
+    line-height: 1.8;
+    color: #eef6fb;
+    margin-bottom: 32px;
+}
+
+/* Tombol Hero */
+
+.hero .btn {
+    display: inline-block;
+    padding: 14px 28px;
+    background: #ffffff;
+    color: #1d5d8f;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    transition: all 0.3s ease;
+}
+
+.hero .btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 28px rgba(0,0,0,0.22);
 }
 
 .btn {
