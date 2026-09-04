@@ -430,6 +430,107 @@
 
 
 <!-- =====================================================
+     PORTOFOLIO / GALERI
+===================================================== -->
+
+<section id="galeri" class="section-light">
+
+    <div class="section-heading">
+
+        <span class="section-label">
+            PORTOFOLIO
+        </span>
+
+        <h2>
+            Layanan Profesional Kami
+        </h2>
+
+        <p>
+            Kami hadir memberikan layanan profesional dengan
+            mengutamakan integritas, kualitas, dan kepercayaan.
+        </p>
+
+    </div>
+
+
+    <div class="gallery-container">
+
+        <div class="gallery-card">
+
+            <div class="gallery-icon">
+                📑
+            </div>
+
+            <h3>
+                Audit & Assurance
+            </h3>
+
+            <p>
+                Layanan audit dan assurance yang objektif,
+                independen, dan sesuai dengan standar profesional.
+            </p>
+
+        </div>
+
+
+        <div class="gallery-card">
+
+            <div class="gallery-icon">
+                📊
+            </div>
+
+            <h3>
+                Akuntansi & Pelaporan
+            </h3>
+
+            <p>
+                Membantu penyusunan laporan keuangan yang
+                akurat, sistematis, dan dapat diandalkan.
+            </p>
+
+        </div>
+
+
+        <div class="gallery-card">
+
+            <div class="gallery-icon">
+                💼
+            </div>
+
+            <h3>
+                Perpajakan
+            </h3>
+
+            <p>
+                Pendampingan dan konsultasi perpajakan untuk
+                membantu memenuhi kewajiban perpajakan secara tepat.
+            </p>
+
+        </div>
+
+
+        <div class="gallery-card">
+
+            <div class="gallery-icon">
+                🤝
+            </div>
+
+            <h3>
+                Konsultasi Bisnis
+            </h3>
+
+            <p>
+                Solusi dan konsultasi profesional untuk mendukung
+                pengelolaan serta pengembangan bisnis klien.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =====================================================
      KONTAK
 ===================================================== -->
 
@@ -592,3 +693,74 @@
 
 </body>
 </html>
+
+/* =====================================================
+   PORTOFOLIO / GALERI
+===================================================== */
+
+.gallery-container {
+    max-width: 1100px;
+    margin: 45px auto 0;
+    padding: 0 7%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
+}
+
+.gallery-card {
+    background: #ffffff;
+    padding: 30px 22px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 10px 28px rgba(0,0,0,0.10);
+    transition: 0.3s;
+}
+
+.gallery-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 16px 35px rgba(0,0,0,0.15);
+}
+
+.gallery-icon {
+    width: 65px;
+    height: 65px;
+    margin: 0 auto 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #eaf3fa;
+    border-radius: 50%;
+    font-size: 30px;
+}
+
+.gallery-card h3 {
+    margin-bottom: 12px;
+    color: #123b5d;
+}
+
+.gallery-card p {
+    font-size: 14px;
+    line-height: 1.7;
+    color: #666;
+}
+
+
+/* RESPONSIVE GALERI */
+
+@media (max-width: 900px) {
+
+    .gallery-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .gallery-container {
+        grid-template-columns: 1fr;
+        padding: 0 8%;
+    }
+
+}
