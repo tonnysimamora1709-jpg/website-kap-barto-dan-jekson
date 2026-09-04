@@ -1,6 +1,6 @@
-/* ================================
+/* =========================================================
    DASAR
-   ================================ */
+   ========================================================= */
 
 * {
     margin: 0;
@@ -19,11 +19,7 @@ body {
     line-height: 1.6;
 }
 
-
-/* ================================
-   HEADER
-   ================================ */
-
+/* HEADER */
 header {
     width: 100%;
     padding: 18px 8%;
@@ -34,19 +30,15 @@ header {
     border-bottom: 1px solid #eeeeee;
 }
 
-.logo img {
-    width: 90px;
-    height: auto;
-}
-
-/* ================================
-   BRAND
-   ================================ */
-
 .brand {
     display: flex;
     align-items: center;
     gap: 15px;
+}
+
+.logo img {
+    width: 90px;
+    height: auto;
 }
 
 .brand-name {
@@ -66,6 +58,7 @@ header {
     margin-top: 2px;
 }
 
+/* NAVIGASI */
 nav {
     display: flex;
     align-items: center;
@@ -87,55 +80,66 @@ nav a:hover {
     background: #1d5d8f;
 }
 
-
-/* ================================
-   HERO
-   ================================ */
-
+/* HERO */
 .hero {
-    min-height: 520px;
+    min-height: 560px;
     display: flex;
     align-items: center;
-    padding: 80px 8%;
-    background: #f3f7fb;
+    padding: 90px 8%;
+    background: linear-gradient(135deg, #f3f7fb, #ffffff);
 }
 
 .hero-text {
-    max-width: 700px;
+    max-width: 750px;
+}
+
+.hero-subtitle {
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    color: #2a6f97;
+    margin-bottom: 15px;
 }
 
 .hero h1 {
-    font-size: 52px;
-    line-height: 1.15;
+    font-size: 56px;
+    line-height: 1.1;
     color: #16324f;
-    margin-bottom: 25px;
+    margin-bottom: 12px;
+    letter-spacing: 1px;
+}
+
+.hero h2 {
+    font-size: 25px;
+    font-weight: normal;
+    color: #2a6f97;
+    margin-bottom: 22px;
 }
 
 .hero p {
-    font-size: 19px;
+    max-width: 650px;
+    font-size: 18px;
     color: #555;
     margin-bottom: 30px;
 }
 
 .btn {
     display: inline-block;
-    padding: 13px 28px;
+    padding: 14px 32px;
     background: #1d5d8f;
-    color: white;
+    color: #ffffff;
     text-decoration: none;
-    border-radius: 5px;
+    border-radius: 6px;
     font-weight: bold;
+    transition: 0.3s;
 }
 
 .btn:hover {
-    background: #143f61;
+    background: #16324f;
+    transform: translateY(-2px);
 }
 
-
-/* ================================
-   SECTION UMUM
-   ================================ */
-
+/* SECTION UMUM */
 section {
     padding: 80px 8%;
 }
@@ -154,388 +158,148 @@ section > p {
     color: #555;
 }
 
+/* TENTANG KAMI */
+#tentang {
+    background: #ffffff;
+}
 
-/* ================================
-   LAYANAN
-   ================================ */
+.tentang-container {
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 70px;
+    align-items: center;
+}
 
+.tentang-text {
+    text-align: left;
+}
+
+.section-label {
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    color: #2a6f97;
+    margin-bottom: 12px;
+}
+
+.tentang-text h2 {
+    text-align: left;
+    font-size: 38px;
+    line-height: 1.2;
+    margin-bottom: 25px;
+}
+
+.tentang-text p:not(.section-label) {
+    text-align: left;
+    margin: 0 0 18px;
+    color: #555;
+}
+
+.nilai-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.nilai-box {
+    padding: 28px;
+    background: #f5f8fb;
+    border-left: 4px solid #1d5d8f;
+    transition: 0.3s;
+}
+
+.nilai-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.nilai-box h3 {
+    color: #16324f;
+    margin-bottom: 10px;
+}
+
+.nilai-box p {
+    color: #666;
+    font-size: 14px;
+}
+
+/* LAYANAN PROFESIONAL */
 #layanan {
-    background: #f7f9fc;
+    background: #f5f8fb;
+}
+
+.layanan-label {
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+.layanan-intro {
+    margin-bottom: 45px !important;
 }
 
 .layanan-container {
-    margin-top: 40px;
+    max-width: 1200px;
+    margin: 35px auto 0;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 25px;
 }
 
 .layanan-box {
-    background: white;
-    padding: 30px;
+    background: #ffffff;
+    padding: 35px 25px;
     text-align: center;
-    border-radius: 8px;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
+    border-radius: 10px;
+    border: 1px solid #e5ebf0;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
+    transition: 0.3s;
+}
+
+.layanan-box:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.10);
+}
+
+.layanan-icon {
+    width: 55px;
+    height: 55px;
+    margin: 0 auto 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #eaf2f8;
+    color: #1d5d8f;
+    border-radius: 50%;
+    font-size: 24px;
+    font-weight: bold;
 }
 
 .layanan-box h3 {
-    color: #1d5d8f;
+    color: #16324f;
+    font-size: 21px;
     margin-bottom: 15px;
 }
 
 .layanan-box p {
     color: #666;
+    font-size: 14px;
+    margin-bottom: 20px;
 }
 
-
-/* ================================
-   KONTAK
-   ================================ */
-
-#kontak {
-    background: #f3f7fb;
+.layanan-box a {
+    color: #1d5d8f;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
 }
 
-#kontak p {
-    margin: 8px auto;
+.layanan-box a:hover {
+    color: #16324f;
 }
 
-
-/* ================================
-   FOOTER
-   ================================ */
-
-footer {
-    padding: 25px;
-    text-align: center;
-    background: #16324f;
-    color: white;
-}
-
-
-/* ================================
-   RESPONSIVE
-   ================================ */
-
-@media (max-width: 900px) {
-
-    .layanan-container {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .hero h1 {
-        font-size: 42px;
-    }
-
-}
-
-@media (max-width: 800px) {
-
-    header {
-        flex-direction: column;
-        gap: 20px;
-        padding: 18px 5%;
-    }
-
-    nav {
-        width: 100%;
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 5px;
-    }
-
-    nav a {
-        font-size: 13px;
-        padding: 8px 10px;
-    }
-
-}
-
-@media (max-width: 600px) {
-
-   .layanan-container {
-    grid-template-columns: 1fr;
-    gap: 20px;
-   }
-
-   .layanan-box {
-    padding: 25px 20px;
-   }
-
-   .tentang-container {
-    grid-template-columns: 1fr;
-    gap: 40px;
-   }
-
-   .tentang-text h2 {
-    font-size: 30px;
-    text-align: center;
-    }
-
-   .tentang-text {
-    text-align: center;
-    }
-
-   .tentang-text p {
-    text-align: center;
-   }
-
-   .hero {
-    text-align: center;
-    padding: 70px 5%;
-   }
-
-   .hero h1 {
-    font-size: 34px;
-   }
-
-   .hero p {
-    font-size: 16px;
-   }
-
-}
-
-/* ================================ 
-   HERO ELEGAN 
-  ================================ */ 
-
-.hero { 
-   min-height: 560px; 
-   display: flex; 
-   align-items: center; 
-   padding: 90px 8%; 
-   background: linear-gradient(135deg, #f3f7fb, #ffffff); 
-} 
-
-.hero-text { 
-   max-width: 750px; 
-} 
-
-.hero-subtitle { 
-   font-size: 14px; 
-   font-weight: bold; 
-   letter-spacing: 3px; 
-   color: #2a6f97; 
-   margin-bottom: 15px; 
-} 
-
-.hero h1 { 
-   font-size: 56px; 
-   line-height: 1.1; 
-   color: #16324f; 
-   margin-bottom: 12px; 
-   letter-spacing: 1px; 
-} 
-
-.hero h2 { 
-   font-size: 25px; 
-   font-weight: normal; 
-   color: #2a6f97; 
-   margin-bottom: 22px; 
-} 
-
-.hero p { 
-   font-size: 18px; 
-   color: #555; 
-   margin-bottom: 30px; 
-   max-width: 650px; 
-} 
-
-.hero .btn { 
-   padding: 14px 32px; 
-   background: #1d5d8f; 
-   color: white; 
-   border-radius: 6px; 
-   transition: 0.3s; 
-} 
-
-.hero .btn:hover { 
-   background: #16324f; 
-  transform: translateY(-2px); 
-}
-
-/* ================================ 
-   TENTANG KAMI ================================ */ 
-
-#tentang { 
-    background: #ffffff; 
-} 
-
-.tentang-container { 
-   display: grid; 
-   grid-template-columns: 1fr 1fr; 
-   gap: 70px; 
-   align-items: center; 
-   max-width: 1200px; 
-   margin: auto; 
-} 
-
-.tentang-text { 
-   text-align: left; 
-} 
-
-.section-label { 
-   font-size: 13px; 
-   font-weight: bold; 
-   letter-spacing: 3px; 
-   color: #2a6f97; 
-   margin-bottom: 12px; 
-} 
-
-.tentang-text h2 { 
-   text-align: left; 
-   font-size: 38px; 
-   line-height: 1.2; 
-   margin-bottom: 25px; 
-} 
-
-.tentang-text p:not(.section-label) { 
-   text-align: left; 
-   margin: 0 0 18px; 
-   color: #555; 
-} 
-
-.nilai-container { 
-   display: grid; 
-   grid-template-columns: 1fr 1fr; 
-   gap: 20px; 
-} 
-
-.nilai-box { 
-   padding: 28px; 
-   background: #f5f8fb; 
-   border-left: 4px solid #1d5d8f; 
-   transition: 0.3s; 
-} 
-
-.nilai-box:hover { 
-   transform: translateY(-5px); 
-   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08); 
-} 
-
-.nilai-box h3 { 
-   color: #16324f; 
-   margin-bottom: 10px; 
-} 
-
-.nilai-box p { 
-   color: #666; 
-   font-size: 14px; 
-} 
-
-
-/* RESPONSIVE TENTANG */ 
-
-@media (max-width: 800px) { 
-
-   .tentang-container { 
-     grid-template-columns: 1fr; 
-     gap: 40px; 
-} 
-
-.tentang-text h2 { 
-   font-size: 32px; 
-   }
- 
-}
-
-/* ================================ 
-   LAYANAN PROFESIONAL ================================ */ 
-
-#layanan { 
-   background: #f5f8fb; 
-} 
-
-.layanan-label { 
-   text-align: center; 
-   margin-bottom: 8px; 
-} 
-
-.layanan-intro { 
-   margin-bottom: 45px !important; 
-} 
-
-.layanan-container { 
-   margin-top: 35px; 
-   display: grid; 
-   grid-template-columns: repeat(4, 1fr); 
-   gap: 25px; 
-   max-width: 1200px; 
-   margin-left: auto; 
-   margin-right: auto; 
-} 
-
-.layanan-box { 
-   background: #ffffff; 
-   padding: 35px 25px; 
-   text-align: center; 
-   border-radius: 10px; 
-   border: 1px solid #e5ebf0; 
-   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
-   transition: 0.3s; 
-} 
-
-.layanan-box:hover { 
-   transform: translateY(-8px); 
-   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.10); 
-} 
-
-.layanan-icon { 
-   width: 55px; height: 55px; 
-   margin: 0 auto 20px; 
-   display: flex; 
-   align-items: center; 
-   justify-content: center; 
-   background: #eaf2f8; 
-   color: #1d5d8f; 
-   border-radius: 50%; 
-   font-size: 24px; 
-   font-weight: bold; 
-} 
-
-.layanan-box h3 { 
-   color: #16324f; 
-   font-size: 21px; 
-   margin-bottom: 15px; 
-} 
-
-.layanan-box p { 
-   color: #666; 
-   font-size: 14px; 
-   margin-bottom: 20px; 
-} 
-
-.layanan-box a { 
-   color: #1d5d8f; 
-   text-decoration: none; 
-   font-size: 14px; 
-   font-weight: bold; 
-} 
-
-.layanan-box a:hover { 
-   color: #16324f; 
-} 
-
-/* RESPONSIVE LAYANAN */ 
-
-@media (max-width: 900px) { 
-
-   .layanan-container { 
-     grid-template-columns: repeat(2, 1fr); 
-   } 
-} 
-
-@media (max-width: 600px) { 
-
-   .layanan-container { 
-     grid-template-columns: 1fr; 
-   } 
-}
-
-/* ================================
-   TIM PROFESIONAL
-   ================================ */
-
+/* TIM PROFESIONAL */
 #tim {
     background: #ffffff;
 }
@@ -603,35 +367,7 @@ footer {
     margin-top: 18px;
 }
 
-
-/* RESPONSIVE TIM */
-
-@media (max-width: 600px) {
-
-    .kontak-container {
-        grid-template-columns: 1fr;
-        gap: 40px;
-    }
-
-    .kontak-text {
-        text-align: center;
-    }
-
-    .kontak-text h2 {
-        text-align: center;
-        font-size: 30px;
-    }
-
-    .kontak-text > p:last-child {
-        text-align: center;
-    }
-
-}
-
-/* ================================
-   KONTAK
-   ================================ */
-
+/* KONTAK */
 #kontak {
     background: #f5f8fb;
 }
@@ -657,12 +393,15 @@ footer {
 }
 
 .kontak-text > p:last-child {
+    max-width: 500px;
     text-align: left;
     color: #666;
     font-size: 16px;
-    max-width: 500px;
 }
 
+#kontak p {
+    margin: 8px auto;
+}
 
 .kontak-info {
     background: #ffffff;
@@ -703,9 +442,6 @@ footer {
     font-size: 14px;
 }
 
-
-/* TOMBOL WHATSAPP */
-
 .whatsapp-btn {
     display: block;
     margin-top: 25px;
@@ -724,26 +460,7 @@ footer {
     transform: translateY(-2px);
 }
 
-
-/* RESPONSIVE KONTAK */
-
-@media (max-width: 800px) {
-
-    .kontak-container {
-        grid-template-columns: 1fr;
-        gap: 40px;
-    }
-
-    .kontak-text h2 {
-        font-size: 32px;
-    }
-
-}
-
-/* ================================
-   FOOTER
-   ================================ */
-
+/* FOOTER */
 footer {
     background: #16324f;
     color: #ffffff;
@@ -805,10 +522,123 @@ footer {
     font-size: 13px;
 }
 
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
 
-/* RESPONSIVE FOOTER */
+@media (max-width: 900px) {
+    .layanan-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .hero h1 {
+        font-size: 46px;
+    }
+}
+
+@media (max-width: 800px) {
+    header {
+        flex-direction: column;
+        gap: 20px;
+        padding: 18px 5%;
+    }
+
+    nav {
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 5px;
+    }
+
+    nav a {
+        font-size: 13px;
+        padding: 8px 10px;
+    }
+
+    .tentang-container,
+    .kontak-container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .tentang-text,
+    .kontak-text {
+        text-align: center;
+    }
+
+    .tentang-text h2,
+    .kontak-text h2 {
+        text-align: center;
+    }
+
+    .tentang-text p:not(.section-label) {
+        text-align: center;
+    }
+
+    .kontak-text > p:last-child {
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .tentang-text h2,
+    .kontak-text h2 {
+        font-size: 32px;
+    }
+}
 
 @media (max-width: 600px) {
+    section {
+        padding: 65px 5%;
+    }
+
+    .hero {
+        min-height: 500px;
+        text-align: center;
+        padding: 70px 5%;
+    }
+
+    .hero-text {
+        max-width: 100%;
+    }
+
+    .hero h1 {
+        font-size: 34px;
+    }
+
+    .hero h2 {
+        font-size: 21px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .layanan-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .layanan-box {
+        padding: 25px 20px;
+    }
+
+    .nilai-container {
+        grid-template-columns: 1fr;
+    }
+
+    .tim-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .tim-card {
+        padding: 30px 20px;
+    }
+
+    .kontak-info {
+        padding: 25px 20px;
+    }
 
     .footer-container {
         flex-direction: column;
@@ -820,5 +650,4 @@ footer {
         justify-content: center;
         gap: 15px;
     }
-
 }
