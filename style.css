@@ -1471,3 +1471,33 @@ footer {
 
     text-transform: uppercase;
 }
+
+/* =========================================================
+   POLISH TIM PROFESIONAL
+========================================================= */
+
+.team-card {
+    position: relative;
+    overflow: hidden;
+}
+
+.team-card::before {
+    content: "";
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 4px;
+
+    background: #b08d2c;
+}
+
+.team-avatar {
+    transition: 0.3s ease;
+}
+
+.team-card:hover .team-avatar {
+    transform: scale(1.08);
+}
