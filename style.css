@@ -836,12 +836,14 @@ section {
     font-size: 14px;
 }
 
+/* WHATSAPP BUTTON */
+
 .whatsapp-button {
     display: block;
 
     margin-top: 25px;
 
-    padding: 14px 20px;
+    padding: 15px 20px;
 
     background: #1d5d8f;
 
@@ -849,19 +851,28 @@ section {
 
     text-align: center;
 
-    border-radius: 7px;
+    border-radius: 8px;
 
     font-weight: bold;
 
-    transition: 0.3s;
+    letter-spacing: 0.3px;
+
+    box-shadow:
+        0 8px 20px rgba(0,0,0,0.12);
+
+    transition: all 0.3s ease;
 }
 
 .whatsapp-button:hover {
-    background: #16324f;
+    background: #b08d2c;
 
-    transform: translateY(-2px);
+    color: #ffffff;
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 12px 25px rgba(0,0,0,0.18);
 }
-
 
 /* =========================================================
    FOOTER
