@@ -1445,3 +1445,23 @@ footer {
     }
 
 }
+
+/* =========================================================
+   LABEL HERO
+========================================================= */
+
+.hero-label {
+    display: inline-block;
+
+    margin-bottom: 18px;
+
+    color: #b08d2c;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    letter-spacing: 3px;
+
+    text-transform: uppercase;
+}
