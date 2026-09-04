@@ -1577,3 +1577,80 @@ header {
 section {
     scroll-margin-top: 90px;
 }
+
+/* =========================================================
+   POLISH MENU NAVIGASI
+========================================================= */
+
+nav a {
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+nav a::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: -6px;
+
+    width: 0;
+    height: 2px;
+
+    background: #b08d2c;
+
+    transition: width 0.3s ease;
+}
+
+nav a:hover {
+    color: #b08d2c;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+/* =========================================================
+   OPTIMASI MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+    header {
+        padding: 12px 5%;
+    }
+
+    .brand-name strong {
+        font-size: 16px;
+    }
+
+    .brand-name span {
+        font-size: 11px;
+    }
+
+    nav a {
+        font-size: 13px;
+    }
+
+    .hero-text h1 {
+        font-size: 42px;
+    }
+
+    .hero-text h2 {
+        font-size: 20px;
+    }
+
+    .hero-text p {
+        font-size: 14px;
+    }
+
+    .detail-service {
+        margin: 20px 7% 50px;
+        padding: 30px 25px;
+    }
+
+    .contact-container {
+        padding: 0 7%;
+    }
+}
