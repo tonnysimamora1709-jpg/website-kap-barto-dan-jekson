@@ -858,3 +858,9 @@ footer {
         gap: 15px;
     }
 }
+
+.hero-cards {
+    display: grid !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
