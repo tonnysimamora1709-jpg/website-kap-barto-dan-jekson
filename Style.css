@@ -1,6 +1,6 @@
 /* =========================================================
-   DASAR
-   ========================================================= */
+   RESET & DASAR
+========================================================= */
 
 * {
     margin: 0;
@@ -13,63 +13,103 @@ html {
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     color: #222;
     background: #ffffff;
     line-height: 1.6;
 }
 
-/* HEADER */
+a {
+    text-decoration: none;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
 header {
     width: 100%;
-    min-height: 110px;
-    padding: 15px 8%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    min-height: 90px;
+    padding: 12px 7%;
     background: #ffffff;
-    border-bottom: 1px solid #eeeeee;
+    border-bottom: 1px solid #e5e9ed;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    position: relative;
+    z-index: 10;
 }
 
 .brand {
     display: flex;
     align-items: center;
-    gap: 15px;
+    gap: 14px;
 }
 
+/* LOGO */
+
 .logo {
-    width: 90px;
-    height: 80px;
+    width: 65px;
+    height: 65px;
+
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-shrink: 0;
+
     overflow: hidden;
+    flex-shrink: 0;
 }
 
 .logo img {
-    width: 90px !important;
-    height: 90px !important;
-    max-width: 90px !important;
-    max-height: 90px !important;
+    width: 65px;
+    height: 65px;
+
+    max-width: 65px;
+    max-height: 65px;
+
     object-fit: contain;
     display: block;
 }
 
-/* NAVIGASI */
+.brand-name {
+    display: flex;
+    flex-direction: column;
+}
+
+.brand-name strong {
+    color: #16324f;
+    font-size: 18px;
+    letter-spacing: 1px;
+}
+
+.brand-name span {
+    color: #6c7b88;
+    font-size: 12px;
+    margin-top: 2px;
+}
+
+
+/* =========================================================
+   NAVIGASI
+========================================================= */
+
 nav {
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 5px;
 }
 
 nav a {
-    text-decoration: none;
     color: #1d3557;
     font-size: 14px;
     font-weight: bold;
-    padding: 10px 14px;
-    border-radius: 5px;
+
+    padding: 9px 13px;
+    border-radius: 6px;
+
     transition: 0.3s;
 }
 
@@ -78,637 +118,804 @@ nav a:hover {
     background: #1d5d8f;
 }
 
-/* =========================================
-   HERO / BERANDA
-   ========================================= */
+
+/* =========================================================
+   HERO
+========================================================= */
 
 .hero {
-    min-height: 560px; 
-    padding: 80px 8%; 
-    background: linear-gradient(135deg, #0f3557, #1d5d8f, #2a6f97); 
-    position: relative; 
+    min-height: 580px;
+    padding: 80px 7%;
+
+    background:
+        linear-gradient(
+            135deg,
+            #0d3152,
+            #1d5d8f,
+            #2d789f
+        );
+
+    position: relative;
     overflow: hidden;
 }
 
-.hero-content { 
-   max-width: 1200px; 
-   margin: 0 auto; 
-   display: grid; 
-   grid-template-columns: 1.1fr 0.9fr; 
-   gap: 60px; 
-   align-items: center; 
-}
+.hero::before {
+    content: "";
 
-/* TEKS HERO */
+    position: absolute;
 
-.hero-text { 
-   position: relative; 
-   z-index: 2; 
-   max-width: 700px; 
-}
+    width: 500px;
+    height: 500px;
 
-.hero-subtitle {
-   display: inline-block;
-   color: #dcecf8;
-   font-size: 14px;
-   font-weight: bold;
-   letter-spacing: 3px;
-   padding: 8px 16px;
-   margin-bottom: 18px;
-   border-left: 4px solid #ffffff;
-   background: rgba(255,255,255,0.10);
-}
+    border: 1px solid rgba(255,255,255,0.12);
 
-.hero h1 {
-   color: #ffffff;
-   font-size: 56px;
-   line-height: 1.1;
-   margin-bottom: 15px;
-   letter-spacing: 2px;
-}
+    border-radius: 50%;
 
-.hero h2 {
-   color: #dcecf8; 
-   font-size: 25px; 
-   font-weight: normal; 
-   margin-bottom: 22px; 
-}
-
-.hero-text > p:not(.hero-subtitle) { 
-   color: #eef6fb; 
-   font-size: 17px; 
-   line-height: 1.8; 
-   margin-bottom: 30px; 
-}
-
-/* TOMBOL */
-.hero .btn {
-   display: inline-block;
-   padding: 14px 28px;
-   background: #ffffff;
-   color: #1d5d8f;
-   border-radius: 8px;
-   text-decoration: none;
-   font-weight: bold;
-   box-shadow: 0 8px 20px rgba(0,0,0,0.18);
-   transition: 0.3s; 
-}
-
-.hero .btn:hover { 
-   transform: translateY(-4px); 
-   box-shadow: 0 14px 28px rgba(0,0,0,0.25); 
-}
-
-/* ========================================= KOTAK LAYANAN DI HERO ========================================= */
-
-.hero-cards { 
-   display: grid; 
-   grid-template-columns: 1fr; gap: 18px; 
-   position: relative; 
-   z-index: 2; 
-}
-
-.hero-card {
-   background: rgba(255,255,255,0.96);
-   padding: 22px 25px;
-   border-radius: 12px;
-   display: grid;
-   grid-template-columns: 55px 1fr;
-   column-gap: 18px;
-   align-items: center;
-   box-shadow: 0 12px 30px rgba(0,0,0,0.15);
-   transition: 0.3s;
-}
-
-.hero-card:hover { 
-   transform: translateX(-8px); 
-   box-shadow: 0 18px 38px rgba(0,0,0,0.22); 
-}
-
-.hero-card-icon { 
-   grid-row: span 2; 
-   width: 52px; 
-   height: 52px;
-   border-radius: 12px; 
-   background: #eaf2f8; 
-   color: #1d5d8f; 
-   display: flex; 
-   align-items: center;
-   justify-content: center; 
-   font-size: 23px; 
-   font-weight: bold; 
-}
-
-.hero-card h3 { 
-   color: #16324f; 
-   font-size: 19px; 
-   margin: 0 0 5px; 
-}
-
-.hero-card p { 
-   color: #666; 
-   font-size: 13px; 
-   line-height: 1.5; 
-   margin: 0; 
-}
-
-/* DEKORASI */
-
-.hero::before { 
-   content: ""; 
-   position: absolute; 
-   width: 420px; 
-   height: 420px;
-   border: 1px solid rgba(255,255,255,0.12); 
-   border-radius: 50%; 
-   right: -120px; 
-   top: -100px; 
+    right: -180px;
+    top: -180px;
 }
 
 .hero::after {
-   content: ""; 
-   position: absolute; 
-   width: 280px; 
-   height: 280px;
-   border: 1px solid rgba(255,255,255,0.10); 
-   border-radius: 50%; 
-   right: 100px; 
-   bottom: -170px; 
-}
+    content: "";
 
-/* RESPONSIVE */
+    position: absolute;
 
-@media (max-width: 900px) {
+    width: 300px;
+    height: 300px;
 
-   .hero-content {
-      grid-template-columns: 1fr; 
-      gap: 40px; 
-   }
+    border: 1px solid rgba(255,255,255,0.10);
 
-   .hero h1 { 
-      font-size: 45px; 
-   }
+    border-radius: 50%;
 
-   .hero-cards { 
-      max-width: 600px; 
-   } 
-}
-
-@media (max-width: 600px) {
-
-   .hero { 
-      padding: 60px 6%; 
-   }
-
-   .hero h1 { 
-      font-size: 36px; 
-   }
-
-   .hero h2 { 
-      font-size: 21px; 
-   }
-
-   .hero-card { 
-      grid-template-columns: 45px 1fr; 
-   } 
+    right: 100px;
+    bottom: -200px;
 }
 
 
-/* SECTION UMUM */
-section {
-    padding: 80px 8%;
-}
+/* HERO CONTAINER */
 
-section h2 {
-    text-align: center;
-    font-size: 34px;
-    color: #16324f;
-    margin-bottom: 25px;
-}
-
-section > p {
-    max-width: 800px;
+.hero-container {
+    max-width: 1200px;
     margin: auto;
-    text-align: center;
-    color: #555;
+
+    display: grid;
+
+    grid-template-columns:
+        1.1fr
+        0.9fr;
+
+    gap: 60px;
+
+    align-items: center;
+
+    position: relative;
+    z-index: 2;
 }
 
-/* TENTANG KAMI */
+
+/* HERO TEXT */
+
+.hero-text {
+    max-width: 680px;
+}
+
+.hero-label {
+    display: inline-block;
+
+    padding: 8px 15px;
+
+    margin-bottom: 18px;
+
+    color: #dcecf8;
+
+    font-size: 13px;
+    font-weight: bold;
+
+    letter-spacing: 3px;
+
+    border-left: 4px solid #ffffff;
+
+    background: rgba(255,255,255,0.10);
+}
+
+.hero h1 {
+    color: #ffffff;
+
+    font-size: 58px;
+
+    line-height: 1.05;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 18px;
+}
+
+.hero h2 {
+    color: #dcecf8;
+
+    font-size: 25px;
+
+    font-weight: normal;
+
+    margin-bottom: 20px;
+}
+
+.hero-text > p {
+    color: #eef6fb;
+
+    font-size: 16px;
+
+    line-height: 1.8;
+
+    max-width: 650px;
+
+    margin-bottom: 30px;
+}
+
+
+/* HERO BUTTON */
+
+.hero-button {
+    display: inline-block;
+
+    padding: 14px 28px;
+
+    background: #ffffff;
+
+    color: #1d5d8f;
+
+    border-radius: 7px;
+
+    font-weight: bold;
+
+    box-shadow:
+        0 8px 20px rgba(0,0,0,0.18);
+
+    transition: 0.3s;
+}
+
+.hero-button:hover {
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 14px 28px rgba(0,0,0,0.25);
+}
+
+
+/* =========================================================
+   HERO CARDS
+========================================================= */
+
+.hero-cards {
+    display: grid;
+
+    grid-template-columns: 1fr;
+
+    gap: 18px;
+}
+
+.hero-card {
+    background: rgba(255,255,255,0.97);
+
+    padding: 24px;
+
+    border-radius: 13px;
+
+    display: grid;
+
+    grid-template-columns: 58px 1fr;
+
+    gap: 18px;
+
+    align-items: center;
+
+    box-shadow:
+        0 12px 30px rgba(0,0,0,0.16);
+
+    transition: 0.3s;
+}
+
+.hero-card:hover {
+    transform: translateX(-8px);
+
+    box-shadow:
+        0 18px 40px rgba(0,0,0,0.22);
+}
+
+.hero-icon {
+    width: 55px;
+    height: 55px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 13px;
+
+    background: #eaf2f8;
+
+    color: #1d5d8f;
+
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.hero-card h3 {
+    color: #16324f;
+
+    font-size: 19px;
+
+    margin-bottom: 4px;
+}
+
+.hero-card p {
+    color: #666;
+
+    font-size: 13px;
+
+    line-height: 1.5;
+}
+
+
+/* =========================================================
+   SECTION UMUM
+========================================================= */
+
+section {
+    padding: 85px 7%;
+}
+
+.section-container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.section-light {
+    background: #f5f8fb;
+}
+
+.section-heading {
+    max-width: 750px;
+
+    margin: 0 auto 50px;
+
+    text-align: center;
+}
+
+.section-label {
+    display: inline-block;
+
+    color: #2a6f97;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 10px;
+}
+
+.section-heading h2 {
+    color: #16324f;
+
+    font-size: 38px;
+
+    line-height: 1.2;
+
+    margin-bottom: 15px;
+}
+
+.section-heading p {
+    color: #666;
+
+    font-size: 15px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   TENTANG KAMI
+========================================================= */
+
 #tentang {
     background: #ffffff;
 }
 
-.tentang-container {
-    max-width: 1200px;
-    margin: auto;
+.section-container {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 70px;
+
+    grid-template-columns:
+        1fr
+        1fr;
+
+    gap: 65px;
+
     align-items: center;
 }
 
-.tentang-text {
-    text-align: left;
-}
+.about-text h2 {
+    color: #16324f;
 
-.section-label {
-    font-size: 13px;
-    font-weight: bold;
-    letter-spacing: 3px;
-    color: #2a6f97;
-    margin-bottom: 12px;
-}
+    font-size: 39px;
 
-.tentang-text h2 {
-    text-align: left;
-    font-size: 38px;
     line-height: 1.2;
+
     margin-bottom: 25px;
 }
 
-.tentang-text p:not(.section-label) {
-    text-align: left;
-    margin: 0 0 18px;
+.about-text p {
     color: #555;
+
+    font-size: 15px;
+
+    line-height: 1.8;
+
+    margin-bottom: 18px;
 }
+
+
+/* NILAI */
 
 .nilai-container {
     display: grid;
+
     grid-template-columns: 1fr 1fr;
+
     gap: 20px;
 }
 
-.nilai-box {
-    padding: 28px;
+.nilai-card {
     background: #f5f8fb;
-    border-left: 4px solid #1d5d8f;
+
+    padding: 27px;
+
+    border-radius: 12px;
+
+    border: 1px solid #e3eaf0;
+
     transition: 0.3s;
 }
 
-.nilai-box:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+.nilai-card:hover {
+    transform: translateY(-7px);
+
+    box-shadow:
+        0 15px 30px rgba(0,0,0,0.08);
 }
 
-.nilai-box h3 {
-    color: #16324f;
-    margin-bottom: 10px;
-}
+.nilai-icon {
+    width: 48px;
+    height: 48px;
 
-.nilai-box p {
-    color: #666;
-    font-size: 14px;
-}
-
-/* =========================================
-   LAYANAN PROFESIONAL
-   ========================================= */
-
-#layanan {
-    background: #f5f8fb;
-    text-align: center;
-}
-
-.layanan-label {
-    text-align: center;
-    margin-bottom: 10px;
-}
-
-#layanan h2 {
-    color: #16324f;
-    font-size: 34px;
-    margin-bottom: 12px;
-}
-
-.layanan-intro {
-    max-width: 700px;
-    margin: 0 auto 50px !important;
-    color: #666;
-    line-height: 1.7;
-}
-
-/* CONTAINER CARD */
-
-.layanan-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 25px;
-}
-
-/* CARD */
-
-.layanan-box {
-    position: relative;
-    background: #ffffff;
-    padding: 38px 25px 32px;
-    text-align: center;
-    border-radius: 14px;
-    border: 1px solid #e4ebf2;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
-    transition: all 0.3s ease;
-    overflow: hidden;
-}
-
-/* GARIS BIRU DI ATAS CARD */
-
-.layanan-box::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 4px;
-    background: #1d5d8f;
-}
-
-/* EFEK SAAT MOUSE */
-
-.layanan-box:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.12);
-    border-color: #d5e2ec;
-}
-
-/* ICON */
-
-.layanan-icon {
-    width: 65px;
-    height: 65px;
-    margin: 0 auto 22px;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: #eaf2f8;
-    color: #1d5d8f;
-    border-radius: 14px;
-    font-size: 27px;
-    font-weight: bold;
-    transition: all 0.3s ease;
-}
 
-.layanan-box:hover .layanan-icon {
-    background: #1d5d8f;
-    color: #ffffff;
-    transform: scale(1.08);
-}
-
-/* JUDUL CARD */
-
-.layanan-box h3 {
-    color: #16324f;
-    font-size: 21px;
     margin-bottom: 15px;
-}
 
-/* DESKRIPSI */
+    border-radius: 11px;
 
-.layanan-box p {
-    color: #666;
-    font-size: 14px;
-    line-height: 1.7;
-    min-height: 72px;
-    margin-bottom: 22px;
-}
+    background: #eaf2f8;
 
-/* LINK */
-
-.layanan-box a {
-    display: inline-block;
     color: #1d5d8f;
-    text-decoration: none;
-    font-size: 14px;
+
+    font-size: 21px;
+
     font-weight: bold;
-    transition: 0.3s;
 }
 
-.layanan-box a:hover {
+.nilai-card h3 {
     color: #16324f;
-    transform: translateX(4px);
-}
 
-/* RESPONSIVE */
+    font-size: 18px;
 
-@media (max-width: 1000px) {
-    .layanan-container {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (max-width: 600px) {
-    .layanan-container {
-        grid-template-columns: 1fr;
-    }
-
-    #layanan h2 {
-        font-size: 28px;
-    }
-}
-
-/* TIM PROFESIONAL */
-#tim {
-    background: #ffffff;
-}
-
-.tim-label {
-    text-align: center;
     margin-bottom: 8px;
 }
 
-.tim-intro {
-    margin-bottom: 45px !important;
+.nilai-card p {
+    color: #666;
+
+    font-size: 13px;
+
+    line-height: 1.6;
 }
 
-.tim-container {
-    max-width: 850px;
-    margin: 40px auto 0;
+
+/* =========================================================
+   LAYANAN
+========================================================= */
+
+.service-container {
+    max-width: 1200px;
+
+    margin: auto;
+
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 24px;
 }
 
-.tim-card {
-    background: #f5f8fb;
-    padding: 40px 30px;
+.service-card {
+    position: relative;
+
+    background: #ffffff;
+
+    padding: 38px 25px 32px;
+
+    border-radius: 14px;
+
+    border: 1px solid #e1e8ee;
+
     text-align: center;
-    border: 1px solid #e5ebf0;
-    border-radius: 10px;
+
+    box-shadow:
+        0 8px 25px rgba(0,0,0,0.05);
+
     transition: 0.3s;
+
+    overflow: hidden;
 }
 
-.tim-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.09);
+.service-card::before {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    top: 0;
+
+    width: 100%;
+    height: 4px;
+
+    background: #1d5d8f;
 }
 
-.tim-photo {
-    width: 90px;
-    height: 90px;
+.service-card:hover {
+    transform: translateY(-9px);
+
+    box-shadow:
+        0 18px 40px rgba(0,0,0,0.12);
+}
+
+.service-icon {
+    width: 65px;
+    height: 65px;
+
     margin: 0 auto 20px;
+
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 50%;
-    background: #16324f;
+
+    background: #eaf2f8;
+
+    color: #1d5d8f;
+
+    border-radius: 14px;
+
+    font-size: 26px;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.service-card:hover .service-icon {
+    background: #1d5d8f;
+
     color: #ffffff;
-    font-size: 34px;
-    font-weight: bold;
+
+    transform: scale(1.08);
 }
 
-.tim-card h3 {
+.service-card h3 {
     color: #16324f;
-    font-size: 24px;
-    margin-bottom: 5px;
+
+    font-size: 21px;
+
+    margin-bottom: 14px;
 }
 
-.tim-card span {
-    color: #2a6f97;
-    font-size: 14px;
-    font-weight: bold;
-}
-
-.tim-card p {
+.service-card p {
     color: #666;
+
     font-size: 14px;
-    margin-top: 18px;
-}
 
-/* KONTAK */
-#kontak {
-    background: #f5f8fb;
-}
+    line-height: 1.7;
 
-.kontak-container {
-    max-width: 1100px;
-    margin: auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 70px;
-    align-items: center;
-}
+    min-height: 72px;
 
-.kontak-text {
-    text-align: left;
-}
-
-.kontak-text h2 {
-    text-align: left;
-    font-size: 40px;
-    line-height: 1.2;
     margin-bottom: 20px;
 }
 
-.kontak-text > p:last-child {
-    max-width: 500px;
-    text-align: left;
-    color: #666;
-    font-size: 16px;
-}
-
-#kontak p {
-    margin: 8px auto;
-}
-
-.kontak-info {
-    background: #ffffff;
-    padding: 35px;
-    border-radius: 10px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
-}
-
-.kontak-box {
-    display: flex;
-    align-items: center;
-    gap: 18px;
-    padding: 18px 0;
-    border-bottom: 1px solid #e5ebf0;
-}
-
-.kontak-icon {
-    width: 50px;
-    height: 50px;
-    flex-shrink: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: #eaf2f8;
+.service-card a {
     color: #1d5d8f;
-    border-radius: 50%;
-    font-size: 22px;
-}
 
-.kontak-box h3 {
-    color: #16324f;
-    font-size: 16px;
-    margin-bottom: 3px;
-}
-
-.kontak-box p {
-    color: #666;
     font-size: 14px;
-}
 
-.whatsapp-btn {
-    display: block;
-    margin-top: 25px;
-    padding: 14px 20px;
-    background: #1d5d8f;
-    color: #ffffff;
-    text-align: center;
-    text-decoration: none;
-    border-radius: 6px;
     font-weight: bold;
+
     transition: 0.3s;
 }
 
-.whatsapp-btn:hover {
+.service-card a:hover {
+    color: #16324f;
+}
+
+
+/* =========================================================
+   TIM PROFESIONAL
+========================================================= */
+
+.team-container {
+    max-width: 850px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 28px;
+}
+
+.team-card {
+    background: #f5f8fb;
+
+    padding: 40px 30px;
+
+    text-align: center;
+
+    border: 1px solid #e1e8ee;
+
+    border-radius: 14px;
+
+    transition: 0.3s;
+}
+
+.team-card:hover {
+    transform: translateY(-8px);
+
+    box-shadow:
+        0 15px 35px rgba(0,0,0,0.09);
+}
+
+.team-avatar {
+    width: 90px;
+    height: 90px;
+
+    margin: 0 auto 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
     background: #16324f;
+
+    color: #ffffff;
+
+    font-size: 34px;
+
+    font-weight: bold;
+}
+
+.team-card h3 {
+    color: #16324f;
+
+    font-size: 24px;
+
+    margin-bottom: 4px;
+}
+
+.team-card span {
+    color: #2a6f97;
+
+    font-size: 14px;
+
+    font-weight: bold;
+}
+
+.team-card p {
+    color: #666;
+
+    font-size: 14px;
+
+    margin-top: 17px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   KONTAK
+========================================================= */
+
+.contact-container {
+    max-width: 1100px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        1fr
+        1fr;
+
+    gap: 65px;
+
+    align-items: center;
+}
+
+.contact-text h2 {
+    color: #16324f;
+
+    font-size: 40px;
+
+    line-height: 1.2;
+
+    margin-bottom: 20px;
+}
+
+.contact-text p {
+    color: #666;
+
+    font-size: 16px;
+
+    line-height: 1.8;
+
+    max-width: 500px;
+}
+
+.contact-card {
+    background: #ffffff;
+
+    padding: 35px;
+
+    border-radius: 14px;
+
+    box-shadow:
+        0 12px 35px rgba(0,0,0,0.07);
+}
+
+.contact-item {
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+    padding: 18px 0;
+
+    border-bottom: 1px solid #e5ebf0;
+}
+
+.contact-icon {
+    width: 50px;
+    height: 50px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #eaf2f8;
+
+    color: #1d5d8f;
+
+    border-radius: 50%;
+
+    font-size: 21px;
+}
+
+.contact-item h3 {
+    color: #16324f;
+
+    font-size: 16px;
+
+    margin-bottom: 3px;
+}
+
+.contact-item p {
+    color: #666;
+
+    font-size: 14px;
+}
+
+.whatsapp-button {
+    display: block;
+
+    margin-top: 25px;
+
+    padding: 14px 20px;
+
+    background: #1d5d8f;
+
+    color: #ffffff;
+
+    text-align: center;
+
+    border-radius: 7px;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.whatsapp-button:hover {
+    background: #16324f;
+
     transform: translateY(-2px);
 }
 
-/* FOOTER */
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
 footer {
     background: #16324f;
+
     color: #ffffff;
-    padding: 45px 8% 20px;
+
+    padding: 45px 7% 20px;
 }
 
 .footer-container {
     max-width: 1100px;
+
     margin: auto;
+
     display: flex;
+
     justify-content: space-between;
+
     align-items: center;
+
     gap: 40px;
 }
 
 .footer-brand {
     display: flex;
+
     flex-direction: column;
 }
 
 .footer-brand strong {
     font-size: 20px;
+
     letter-spacing: 1px;
 }
 
 .footer-brand span {
-    font-size: 13px;
     color: #c9d6e2;
+
+    font-size: 13px;
+
     margin-top: 3px;
 }
 
 .footer-menu {
     display: flex;
+
     gap: 25px;
+
     flex-wrap: wrap;
 }
 
 .footer-menu a {
     color: #ffffff;
-    text-decoration: none;
+
     font-size: 14px;
+
     transition: 0.3s;
 }
 
@@ -718,91 +925,74 @@ footer {
 
 .footer-bottom {
     max-width: 1100px;
+
     margin: 35px auto 0;
+
     padding-top: 20px;
-    border-top: 1px solid rgba(255, 255, 255, 0.2);
+
+    border-top: 1px solid rgba(255,255,255,0.2);
+
     text-align: center;
 }
 
 .footer-bottom p {
     color: #c9d6e2;
+
     font-size: 13px;
 }
 
+
 /* =========================================================
-   RESPONSIVE
-   ========================================================= */
+   TABLET
+========================================================= */
 
-@media (max-width: 900px) {
-    .layanan-container {
-        grid-template-columns: repeat(2, 1fr);
+@media (max-width: 1000px) {
+
+    .service-container {
+        grid-template-columns:
+            repeat(2, 1fr);
     }
 
-    .hero h1 {
-        font-size: 46px;
-    }
 }
 
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
 @media (max-width: 800px) {
+
     header {
         flex-direction: column;
-        gap: 20px;
-        padding: 18px 5%;
+
+        gap: 15px;
+
+        padding: 15px 5%;
     }
 
     nav {
-        width: 100%;
         justify-content: center;
+
         flex-wrap: wrap;
-        gap: 5px;
     }
 
     nav a {
         font-size: 13px;
+
         padding: 8px 10px;
     }
 
-    .tentang-container,
-    .kontak-container {
-        grid-template-columns: 1fr;
-        gap: 40px;
-    }
 
-    .tentang-text,
-    .kontak-text {
-        text-align: center;
-    }
-
-    .tentang-text h2,
-    .kontak-text h2 {
-        text-align: center;
-    }
-
-    .tentang-text p:not(.section-label) {
-        text-align: center;
-    }
-
-    .kontak-text > p:last-child {
-        text-align: center;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .tentang-text h2,
-    .kontak-text h2 {
-        font-size: 32px;
-    }
-}
-
-@media (max-width: 600px) {
-    section {
+    .hero {
         padding: 65px 5%;
     }
 
-    .hero {
-        min-height: 500px;
+    .hero-container {
+        grid-template-columns: 1fr;
+
+        gap: 40px;
+
         text-align: center;
-        padding: 70px 5%;
     }
 
     .hero-text {
@@ -810,57 +1000,159 @@ footer {
     }
 
     .hero h1 {
+        font-size: 45px;
+    }
+
+    .hero-label {
+        border-left: 0;
+
+        border-bottom: 3px solid #ffffff;
+    }
+
+    .hero-text > p {
+        margin-left: auto;
+
+        margin-right: auto;
+    }
+
+    .hero-cards {
+        max-width: 600px;
+
+        width: 100%;
+
+        margin: auto;
+
+        text-align: left;
+    }
+
+
+    .section-container {
+        grid-template-columns: 1fr;
+
+        gap: 40px;
+    }
+
+    .about-text {
+        text-align: center;
+    }
+
+    .about-text h2 {
+        font-size: 32px;
+    }
+
+    .section-label {
+        text-align: center;
+    }
+
+
+    .contact-container {
+        grid-template-columns: 1fr;
+
+        gap: 40px;
+    }
+
+    .contact-text {
+        text-align: center;
+    }
+
+    .contact-text h2 {
         font-size: 34px;
     }
 
-    .hero h2 {
-        font-size: 21px;
+    .contact-text p {
+        margin: auto;
     }
 
-    .hero p {
-        font-size: 16px;
-    }
-
-    .layanan-container {
-        grid-template-columns: 1fr;
-        gap: 20px;
-    }
-
-    .layanan-box {
-        padding: 25px 20px;
-    }
-
-    .nilai-container {
-        grid-template-columns: 1fr;
-    }
-
-    .tim-container {
-        grid-template-columns: 1fr;
-        gap: 20px;
-    }
-
-    .tim-card {
-        padding: 30px 20px;
-    }
-
-    .kontak-info {
-        padding: 25px 20px;
-    }
 
     .footer-container {
         flex-direction: column;
-        gap: 20px;
+
         text-align: center;
     }
 
     .footer-menu {
         justify-content: center;
-        gap: 15px;
     }
+
 }
 
-.hero-cards {
-    display: grid !important;
-    visibility: visible !important;
-    opacity: 1 !important;
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+    section {
+        padding: 65px 5%;
+    }
+
+
+    .logo {
+        width: 55px;
+        height: 55px;
+    }
+
+    .logo img {
+        width: 55px;
+        height: 55px;
+
+        max-width: 55px;
+        max-height: 55px;
+    }
+
+    .brand-name strong {
+        font-size: 15px;
+    }
+
+    .brand-name span {
+        font-size: 11px;
+    }
+
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .hero h2 {
+        font-size: 20px;
+    }
+
+    .hero-text > p {
+        font-size: 15px;
+    }
+
+
+    .hero-card {
+        padding: 20px;
+
+        grid-template-columns:
+            50px 1fr;
+    }
+
+    .hero-icon {
+        width: 48px;
+        height: 48px;
+    }
+
+
+    .nilai-container {
+        grid-template-columns: 1fr;
+    }
+
+
+    .service-container {
+        grid-template-columns: 1fr;
+    }
+
+
+    .team-container {
+        grid-template-columns: 1fr;
+    }
+
+
+    .contact-card {
+        padding: 25px 20px;
+    }
+
 }
