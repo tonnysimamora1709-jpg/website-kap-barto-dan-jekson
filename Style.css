@@ -48,10 +48,12 @@ header {
 }
 
 .logo img {
-    width: 90px;
-    max-width: 90px;
-    height: auto;
     display: block;
+    width: 90px !important;
+    max-width: 90px !important;
+    height: auto !important;
+    max-height: 80px !important;
+    object-fit: contain;
 }
 
 /* NAVIGASI */
