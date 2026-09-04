@@ -1532,3 +1532,27 @@ footer {
 .contact-item:hover {
     transform: translateX(5px);
 }
+
+/* =========================================================
+    POLISH FOOTER
+ ========================================================= */
+
+footer {
+    text-align: center;
+
+    padding: 30px 20px;
+
+    background: #123b5d;
+
+    color: #ffffff;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+
+    border-top: 3px solid #b08d2c;
+}
+
+footer p {
+    margin: 0;
+}
