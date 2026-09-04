@@ -22,7 +22,8 @@ body {
 /* HEADER */
 header {
     width: 100%;
-    padding: 18px 8%;
+    min-height: 110px;
+    padding: 15px 8%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -36,26 +37,21 @@ header {
     gap: 15px;
 }
 
+.logo {
+    width: 90px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    overflow: hidden;
+}
+
 .logo img {
     width: 90px;
+    max-width: 90px;
     height: auto;
-}
-
-.brand-name {
-    display: flex;
-    flex-direction: column;
-}
-
-.brand-name strong {
-    font-size: 20px;
-    color: #16324f;
-    letter-spacing: 0.5px;
-}
-
-.brand-name span {
-    font-size: 13px;
-    color: #777;
-    margin-top: 2px;
+    display: block;
 }
 
 /* NAVIGASI */
